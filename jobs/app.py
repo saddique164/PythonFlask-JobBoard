@@ -14,8 +14,17 @@ def open_connection():
 
 def execute_sql():
     connection = open_connection()
+    sql=0
+    values = ()
+    commit = False
+    single = False
+    cursor = connection.execute(sql,values)
+    if commit is True:
+        results = connection.commit()
+    else:
+        results = 'select * from table where if: cursor.fetchone() if single else cursor.fetchall()' 
 
-    return connection
+
 
 
 # @app.teardown_appcontext
