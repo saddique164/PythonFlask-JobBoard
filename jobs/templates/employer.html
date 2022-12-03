@@ -14,7 +14,7 @@
         {% for in reviews %}
           {% %}
         {% endfor %}
-    <div class="box">
+    <div class="box">  
       <article class="media">
         <div class="media-left">
             {% for _ in range(0, review['rating']): %}
@@ -23,6 +23,9 @@
         </div>
         <div class="media-content">
           <div class="content">
+            <p style="strong">title</p>
+            <p style="small">status</p>
+            <p style="small">date</p>
           </div>
         </div>
       </article>
