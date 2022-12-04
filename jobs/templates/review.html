@@ -1,72 +1,4 @@
-<!-- templates/layout.html -->
-<!doctype html>
-<html>
-  <head>
-    <title>Job Board</title>
-  </head>
-  <body>
-    <div class="container top">
-      <div class="content">
-        {% block content %}
-        {% endblock %}
-      </div>
-    </div>
-  </body>
-</html>
-
-<!-- templates/_marcos.html -->
-<!-- show_job -->
-<div class="card adjust-height">
-  <header class="card-header">
-    <p class="card-header-title">
-    </p>
-  </header>
-  <div class="card-content">
-    <div class="content">
-    </div>
-  </div>
-</div>
-
-<!-- templates/index.html -->
-{% block content %}
-  <div class="columns">
-    <div class="column">
-      <h1>Jobs</h1>
-    </div>
-    <div class="column is-one-fifth">
-    </div>
-  </div>
-{% endblock %}
-
-<!-- templates/employer.html -->
-{% block content %}
-  <h2>Jobs</h2>
-
-  <h2>Reviews</h2>
-    {# TODO: Remove comment and add for loop
-      {% %}
-    #}
-    <div class="box">
-      <article class="media">
-        <div class="media-left">
-        </div>
-        <div class="media-content">
-          <div class="content">
-          </div>
-        </div>
-      </article>
-    </div>
-    {# TODO: Remove comment and end for loop
-      {% %}
-    #}
-  <div class="columns">
-    <div class="column">
-      <a class="button is-info is-pulled-right">Create Review</a>
-    </div>
-  </div>
-{% endblock %}
-
-<!-- templates/review.html -->
+{% extends 'layout.html' %}
 {% block content %}
   <h1>New Review</h1>
   <form method="post">
@@ -113,7 +45,6 @@
       </div>
       <div class="control">
         <a class="button is-text">Cancel</a>
-        <a href="{{ url_for('employer', employer_id=employer_id) }}"></a>
       </div>
     </div>
   </form>
